@@ -61,6 +61,14 @@ span {
   margin: auto;
   padding: 2rem 0;
 }
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.w-full {
+  width: 100%;
+}
 .button {
   border: none;
   background: var(--secondary-color);
@@ -119,6 +127,10 @@ input {
   font-size: 1.5rem;
   color: var(--main-color);
 }
+.larger-black {
+  font-size: 2rem;
+  margin: 3rem 0;
+}
 .bold {
   font-weight: bold;
   color: #000000;
@@ -127,6 +139,35 @@ input {
 .light {
   color: var(--light);
 }
+.text-center {
+  text-align: center;
+}
+.sliderContainer {
+  margin: 4rem 0;
+}
+.slide {
+  box-shadow: 0 0 10px var(--light);
+  margin: 1rem;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.large-white {
+  font-size: 1.6rem;
+  color: var(--special-color);
+}
+.right {
+  height: 100%;
+}
+.card {
+  border-bottom: 2px solid var(--light);
+  padding: 1rem;
+}
+.about {
+  background: rgb(189, 189, 189);
+}
+.profile {
+  width: 100%;
+}
 @media only screen and (max-width: 600px) {
   .details {
     flex-direction: column;
@@ -134,5 +175,8 @@ input {
   .detailsCard {
     border-bottom: 2px solid var(--light);
     padding: 0.5rem 0;
+  }
+  .flex {
+    flex-direction: column;
   }
 }
