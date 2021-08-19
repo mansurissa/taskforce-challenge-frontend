@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import ReactFlagsSelect from 'react-flags-select';
+import About from '../components/About';
+import Contacts from '../components/Contacts';
+import Footer from '../components/Footer';
 import NavBar from '../components/NavBar';
-import Profile from '../assets/issa.png';
 
 const HomePage = () => {
   const [selected, setSelected] = useState('');
@@ -144,16 +146,9 @@ const HomePage = () => {
           </div>
         </div>
       </div>
-      <div className='about flex'>
-        <div className='w-full'>
-          <img src={Profile} alt='' className='profile' />
-        </div>
-        <div className='w-full'>
-          <h1 className='larger-black'>NSABIMANA Issa</h1>
-          <h3>SKILLS</h3>
-          <p>React js, Redux, Nodejs, Postres, MongoDB, Git </p>
-        </div>
-      </div>
+      <About />
+      <Contacts />
+      <Footer />
     </div>
   );
 };
