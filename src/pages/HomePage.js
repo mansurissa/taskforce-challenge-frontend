@@ -9,12 +9,14 @@ import NavBar from '../components/NavBar';
 import Back from '../assets/back.svg';
 import Next from '../assets/next.svg';
 import { fetchAllContinentsData } from '../redux/actionCreators/covidDataAction';
+import { useWindowSize } from '../hooks/resizeHook';
 
 const HomePage = () => {
   const [selected, setSelected] = useState('');
+  const size = useWindowSize();
 
   const [activeItemIndex, setActiveItemIndex] = useState(0);
-  const chevronWidth = 80;
+  const chevronWidth = size && size.width > 500 ? 80 : 40;
 
   const dispatch = useDispatch();
   const { total, allContintents } = useSelector(state => state.totalCases);
@@ -91,7 +93,7 @@ const HomePage = () => {
           <Crouse
             requestToChangeActive={setActiveItemIndex}
             activeItemIndex={activeItemIndex}
-            numberOfCards={3}
+            numberOfCards={size && size.width >= 900 ? 3 : 1}
             gutter={40}
             showSlither={true}
             activePosition={'center'}
