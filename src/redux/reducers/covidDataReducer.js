@@ -1,14 +1,29 @@
-const initialStatePosts = {
-  signin: false,
-  register: false,
+import {
+  ALLCONTINENTS_FAILED,
+  ALLCONTINENTS_PENDING,
+  ALLCONTINENTS_SUCESS,
+} from '../actionTypes/types';
+
+const initialStateAllContinents = {
+  loading: false,
+  total: {},
+  allContintents: [],
+  error: null,
 };
 
-export const totalCases = (state = initialStatePosts, action = {}) => {
+export const totalCases = (state = initialStateAllContinents, action = {}) => {
   switch (action.type) {
-    case 'TOGGLE_SIGNIN':
-      return { ...state, signin: action.payload, register: false };
-    case 'TOGGLE_REGISTER':
-      return { ...state, register: action.payload, signin: false };
+    case ALLCONTINENTS_PENDING:
+      return { ...state, loading: true };
+    case ALLCONTINENTS_SUCESS:
+      return {
+        loading: false,
+        allContintents: action.payload.data,
+        total: action.payload.total,
+        error: null,
+      };
+    case ALLCONTINENTS_FAILED:
+      return { loading: false, allContintents: '', error: action.payload };
     default:
       return state;
   }
