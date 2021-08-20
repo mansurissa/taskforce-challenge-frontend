@@ -85,7 +85,9 @@ span {
   border-radius: 3px;
   cursor: pointer;
 }
-.button:hover {
+.button:hover,
+.back:hover,
+.next:hover {
   opacity: 75%;
 }
 
@@ -154,10 +156,7 @@ input {
 .text-center {
   text-align: center;
 }
-.sliderContainer {
-  display: flex;
-  flex-wrap: nowrap;
-  overflow-x: auto;
+.mv-4 {
   margin: 4rem 0;
 }
 .slide {
@@ -165,7 +164,6 @@ input {
   margin: 1rem;
   border-radius: 5px;
   overflow: hidden;
-  min-width: 500px;
 }
 .large-white {
   font-size: 1.6rem;
@@ -196,7 +194,25 @@ a {
   color: white;
   text-decoration: none;
 }
-
+.slideView {
+  position: relative;
+}
+.back,
+.next {
+  background: var(--secondary-color);
+  border-radius: 200px;
+  padding: 1.2rem 1rem;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+.back {
+  left: 10%;
+}
+.next {
+  right: 10%;
+}
 @media only screen and (max-width: 600px) {
   .details {
     flex-direction: column;
