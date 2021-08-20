@@ -66,7 +66,57 @@ const HomePage = () => {
 
       <div className='text-center'>
         <h1 className='larger-black'>PER CONTINENTS</h1>
-        <div className='sliderContainer flex'>
+        <div className='sliderContainer'>
+          <div className='slide flex w-full'>
+            <div className='left w-full'>
+              <p className='larger-black'>AFRICA</p>
+              <p className='large'>342</p>
+              <p className='bold'>Tests</p>
+              <p className='light'>All cases 29,534</p>
+            </div>
+            <div className='bg-main rigt w-full'>
+              <div className='card'>
+                <p className='large-white'>111,423,342</p>
+                <p className='bold'>Tests</p>
+                <p className='light'>All cases 29,534</p>
+              </div>
+              <div className='card'>
+                <p className='large-white'>111,423,342</p>
+                <p className='bold'>Tests</p>
+                <p className='light'>All cases 29,534</p>
+              </div>
+              <div className='card'>
+                <p className='large-white'>111,423,342</p>
+                <p className='bold'>Tests</p>
+                <p className='light'>All cases 29,534</p>
+              </div>
+            </div>
+          </div>
+          <div className='slide flex w-full'>
+            <div className='left w-full'>
+              <p className='larger-black'>AFRICA</p>
+              <p className='large'>342</p>
+              <p className='bold'>Tests</p>
+              <p className='light'>All cases 29,534</p>
+            </div>
+            <div className='bg-main rigt w-full'>
+              <div className='card'>
+                <p className='large-white'>111,423,342</p>
+                <p className='bold'>Tests</p>
+                <p className='light'>All cases 29,534</p>
+              </div>
+              <div className='card'>
+                <p className='large-white'>111,423,342</p>
+                <p className='bold'>Tests</p>
+                <p className='light'>All cases 29,534</p>
+              </div>
+              <div className='card'>
+                <p className='large-white'>111,423,342</p>
+                <p className='bold'>Tests</p>
+                <p className='light'>All cases 29,534</p>
+              </div>
+            </div>
+          </div>
           <div className='slide flex w-full'>
             <div className='left w-full'>
               <p className='larger-black'>AFRICA</p>
