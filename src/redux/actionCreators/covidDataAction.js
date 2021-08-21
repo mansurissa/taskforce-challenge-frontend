@@ -7,6 +7,8 @@ import {
 } from '../actionTypes/types';
 
 export const fetchAllContinentsData = () => async dispatch => {
+  console.log('NNNNN');
+
   dispatch({ type: ALLCONTINENTS_PENDING });
   try {
     const { data } = await axios.get(

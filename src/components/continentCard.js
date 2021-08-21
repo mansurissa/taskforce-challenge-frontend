@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import EachDetail from './EachDetail';
 
 /**
  * return continent's data in jsx
@@ -8,42 +9,42 @@ import PropTypes from 'prop-types';
  */
 
 const ContinentCard = ({ continent }) => {
+  const { todayCases, todayDeaths, todayRecovered, deaths, recovered, cases } =
+    continent;
+
   return (
     <div className='slide flex w-full'>
-      <div className='left w-full'>
-        <p className='larger-black'>{continent.continent}</p>
-        <p className='large'>{continent.todayCases.toLocaleString()}</p>
+      <div className='left w-full p-2'>
+        <p className='larger-black '>{continent.continent}</p>
+        <p className='large'>{todayCases.toLocaleString()}</p>
         <p className='bold'>New cases</p>
-        <p className='light'>All cases: {continent.cases.toLocaleString()}</p>
+        <p className='light'>All cases: {cases.toLocaleString()}</p>
       </div>
       <div className='bg-main rigt w-full'>
-        <div className='card'>
-          <p className='large-white'>
-            {continent.todayDeaths.toLocaleString()}
-          </p>
-          <p className='bold'>New Deaths</p>
-          <p className='white'>
-            Total Deaths: {continent.deaths.toLocaleString()}{' '}
-          </p>
-        </div>
-        <div className='card'>
-          <p className='large-white'>
-            {continent.todayRecovered.toLocaleString()}
-          </p>
-          <p className='bold'>Newly Recovered</p>
-          <p className='white'>
-            Total Deaths: {continent.recovered.toLocaleString()}{' '}
-          </p>
-        </div>
-        <div className='card'>
-          <p className='large-white'>
-            {continent.todayDeaths.toLocaleString()}
-          </p>
-          <p className='bold'>New Vaccinated</p>
-          <p className='white'>
-            Total Deaths: {continent.deaths.toLocaleString()}{' '}
-          </p>
-        </div>
+        <EachDetail
+          text='Deaths'
+          today={todayDeaths.toLocaleString()}
+          total={deaths.toLocaleString()}
+          name='card'
+          todayColor='large-white'
+          totalColor='white'
+        />
+        <EachDetail
+          text='Recovered'
+          today={todayRecovered.toLocaleString()}
+          total={recovered.toLocaleString()}
+          name='card'
+          todayColor='large-white'
+          totalColor='white'
+        />
+        <EachDetail
+          text='Deaths'
+          today={todayDeaths.toLocaleString()}
+          total={deaths.toLocaleString()}
+          name='card'
+          todayColor='large-white'
+          totalColor='white'
+        />
       </div>
     </div>
   );

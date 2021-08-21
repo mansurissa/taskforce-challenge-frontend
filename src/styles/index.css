@@ -173,7 +173,7 @@ input {
   height: 100%;
 }
 .card {
-  border-bottom: 2px solid var(--light);
+  border-bottom: 2px solid rgb(124, 219, 199);
   padding: 1rem;
 }
 .about {
