@@ -45,13 +45,11 @@ const HomePage = () => {
         </div>
 
         <div className='total'>
-          <p className='larger'>
-            {total.length && total.cases.toLocaleString()}
-          </p>
+          <h1 className='larger'>{total && total.cases.toLocaleString()}</h1>
           <p className='small'> Cumulatively</p>
         </div>
       </div>
-      {total.length && (
+      {total && (
         <div className='total details'>
           <div className='detailsCard'>
             <p className='large'>{total.tests.toLocaleString()}</p>
@@ -94,7 +92,7 @@ const HomePage = () => {
             requestToChangeActive={setActiveItemIndex}
             activeItemIndex={activeItemIndex}
             numberOfCards={size && size.width >= 900 ? 3 : 1}
-            gutter={40}
+            gutter={30}
             showSlither={true}
             activePosition={'center'}
             leftChevron={

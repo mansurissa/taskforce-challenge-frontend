@@ -4,7 +4,7 @@
 
 describe('Home page', () => {
   it('should do simple test', () => {
-    expect(3 + 4).toEqual(7);
+    // expect(3 + 4).toEqual(7);
   });
 
   // it('Should test Signin component admin', () => {
