@@ -9,7 +9,9 @@ import {
 export const fetchAllContinentsData = () => async dispatch => {
   dispatch({ type: ALLCONTINENTS_PENDING });
   try {
-    const res = await axios.get(`${BACKEND_URL}/continents?yesterday&sort`);
+    const { data } = await axios.get(
+      `${BACKEND_URL}/continents?yesterday&sort`,
+    );
     const total = {
       cases: 0,
       tests: 0,
@@ -20,7 +22,6 @@ export const fetchAllContinentsData = () => async dispatch => {
       todayDeaths: 0,
       todayRecovered: 0,
     };
-    const { data } = res;
 
     data.forEach(continent => {
       total.cases += continent.cases;

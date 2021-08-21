@@ -1,6 +1,6 @@
 {
   "name": "taskforce-challenge-frontend",
-  "homepage": "http://mansurissa.github.io/taskforce-challenge-frontend",
+  "homepage": "",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,10 +8,8 @@
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^12.8.1",
     "axios": "^0.21.1",
-    "install": "^0.13.0",
     "jest": "^27.0.6",
     "moment": "^2.29.1",
-    "netlify-cli": "^6.7.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-flags-select": "^2.1.2",
@@ -29,9 +27,7 @@
     "test": "jest --verbose  --coverage -u",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [

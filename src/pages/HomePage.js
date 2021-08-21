@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import ReactFlagsSelect from 'react-flags-select';
 import Crouse from 'react-items-carousel';
-import { useDispatch, useSelector } from 'react-redux';
 import About from '../components/About';
 import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
