@@ -5,7 +5,6 @@ import {
   ALLCONTINENTS_PENDING,
   ALLCONTINENTS_SUCESS,
 } from '../actionTypes/types';
-import { totalCases } from '../reducers/covidDataReducer';
 
 export const fetchAllContinentsData = () => async dispatch => {
   dispatch({ type: ALLCONTINENTS_PENDING });

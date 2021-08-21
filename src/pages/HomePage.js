@@ -23,7 +23,7 @@ const HomePage = () => {
 
   useEffect(() => {
     dispatch(fetchAllContinentsData());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div>
