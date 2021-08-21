@@ -22,4 +22,8 @@
 
 - Use `yarn test` to run the application's test.
 
+### Documentation
+
+- Use `yarn run docs` to run get the app's documentaion.
+
 ### Netlify deployment Url
