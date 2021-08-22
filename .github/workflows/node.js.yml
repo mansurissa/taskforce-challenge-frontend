@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npm run test
+        run: npm run test:cover
 
   coverage:
     needs: [build]
@@ -39,5 +39,5 @@ jobs:
         env:
           CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
         with:
-          coverageCommand: npm run test
+          coverageCommand: npm run test:cover
           debug: true
