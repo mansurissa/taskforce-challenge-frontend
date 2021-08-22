@@ -23,21 +23,4 @@ jobs:
         run: npm install
 
       - name: Run tests
-        run: npm run test
-
-  coverage:
-    needs: [build]
-    name: coverage
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: actions/setup-node@master
-        with:
-          node-version: '12'
-      - run: npm install
-      - uses: paambaati/codeclimate-action@v2.7.2
-        env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
-        with:
-          coverageCommand: npm run test
-          debug: true
+        run: npm run test:cover
