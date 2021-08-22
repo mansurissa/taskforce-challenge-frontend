@@ -11,8 +11,12 @@
 
 ### Installation
 
-- Clone this repository from your CLI
+- Clone this repository from your CLI by ` git clone https://github.com/mansurissa/taskforce-challenge-frontend`
+- `cd taskforce-challenge-frontend`
 - Install dependencies using `yarn install` command.
+
+### API 
+The API that provide covid-19 data can be found [here](https://documenter.getpostman.com/view/11144369/Szf6Z9B3?version=latest)
 
 ### Starting the application
 
@@ -27,3 +31,13 @@
 - Use `yarn run docs` to run get the app's documentaion.
 
 ### Netlify deployment Url
+
+https://taskforce-covicalc.netlify.app/
+
+### Screenshots
+![Desktop view](https://user-images.githubusercontent.com/50937835/130346708-445e028f-d3b8-42eb-a37b-1a44e87ac6f9.png)
+![image](https://user-images.githubusercontent.com/50937835/130346762-76145791-abfb-4531-8f2b-5526bfc1cd44.png)
+
+
+
+
