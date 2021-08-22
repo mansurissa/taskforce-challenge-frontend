@@ -10,8 +10,9 @@ import { fetchAllContinentsData } from '../redux/actionCreators/covidDataAction'
 import { useWindowSize } from '../hooks/resizeHook';
 import Header from '../components/Header';
 import DetailsCard from '../components/DetailsCard';
-import ContinentCard from '../components/ContinentCard';
 import RoundButton from '../components/RoundButton';
+import ContinentCard from '../components/ContinentCard';
+import { formatNumber } from '../helpers';
 
 const HomePage = () => {
   const size = useWindowSize();
@@ -28,7 +29,7 @@ const HomePage = () => {
 
   return (
     <div>
-      <Header totalCases={total.cases.toLocaleString()} />
+      <Header totalCases={formatNumber(total.cases)} />
       <DetailsCard total={total} />
       <div className='text-center'>
         <h1 className='larger-black'>PER CONTINENTS</h1>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { formatNumber } from '../helpers';
 import EachDetail from './EachDetail';
 
 const DetailsCard = ({ total }) => {
@@ -16,17 +17,17 @@ const DetailsCard = ({ total }) => {
     <div className='total details'>
       <EachDetail
         text='Tests'
-        today={tests.toLocaleString()}
+        today={formatNumber(tests)}
         name='detailsCard'
-        total={tests.toLocaleString()}
+        total={formatNumber(tests)}
         todayColor='large'
         totalColor='light'
       />
       <EachDetail
         text='Postive Cases'
-        today={todayCases.toLocaleString()}
+        today={formatNumber(todayCases)}
         name='detailsCard'
-        total={cases.toLocaleString()}
+        total={formatNumber(cases)}
         todayColor='large'
         totalColor='light'
       />
@@ -40,17 +41,17 @@ const DetailsCard = ({ total }) => {
       />
       <EachDetail
         text='Recovered'
-        today={todayRecovered.toLocaleString()}
+        today={formatNumber(todayRecovered)}
         name='detailsCard'
-        total={recovered.toLocaleString()}
+        total={formatNumber(recovered)}
         todayColor='large'
         totalColor='light'
       />
       <EachDetail
         text='Deaths'
-        today={todayDeaths.toLocaleString()}
+        today={formatNumber(todayDeaths)}
         name='detailsCard'
-        total={deaths.toLocaleString()}
+        total={formatNumber(deaths)}
         todayColor='large'
         totalColor='light'
       />

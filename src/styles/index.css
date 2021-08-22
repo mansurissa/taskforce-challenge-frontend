@@ -176,6 +176,10 @@ input {
   border-bottom: 2px solid rgb(124, 219, 199);
   padding: 1rem;
 }
+.detailsCard {
+  width: 100%;
+  text-align: center;
+}
 .about {
   background: rgb(189, 189, 189);
 }

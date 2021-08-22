@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { BACKEND_URL } from '../../helpers/url';
+import { BACKEND_URL } from '../../helpers';
 import {
   ALLCONTINENTS_FAILED,
   ALLCONTINENTS_PENDING,

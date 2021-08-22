@@ -1,5 +1,5 @@
 import React from 'react';
-import ContactsCard from './contactsCard';
+import ContactsCard from './ContactsCard';
 
 const Contacts = () => {
   return (
