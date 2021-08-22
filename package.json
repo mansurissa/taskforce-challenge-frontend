@@ -8,13 +8,16 @@
     "@testing-library/react": "^12.0.0",
     "@testing-library/user-event": "^12.8.1",
     "axios": "^0.21.1",
+    "country-list": "^2.2.0",
+    "cypress": "^8.3.0",
     "react": "^17.0.1",
+    "react-country-flag": "^2.3.1",
     "react-dom": "^17.0.1",
-    "react-flags-select": "^2.1.2",
     "react-items-carousel": "^2.8.0",
     "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3",
+    "react-select": "^4.3.1",
     "redux": "^4.0.5",
     "redux-devtools-extension": "^2.13.9",
     "redux-mock-store": "^1.5.4",
@@ -22,7 +25,7 @@
     "web-vitals": "^2.1.0"
   },
   "scripts": {
-    "test": "jest --verbose  --coverage",
+    "test": "npx cypress open",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "eject": "react-scripts eject"

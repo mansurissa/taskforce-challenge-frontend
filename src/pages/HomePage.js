@@ -6,7 +6,10 @@ import Contacts from '../components/Contacts';
 import Footer from '../components/Footer';
 import Back from '../assets/back.svg';
 import Next from '../assets/next.svg';
-import { fetchAllContinentsData } from '../redux/actionCreators/covidDataAction';
+import {
+  fetchAllContinentsData,
+  oneCountryAction,
+} from '../redux/actionCreators/covidDataAction';
 import { useWindowSize } from '../hooks/resizeHook';
 import Header from '../components/Header';
 import DetailsCard from '../components/DetailsCard';
@@ -22,15 +25,42 @@ const HomePage = () => {
 
   const dispatch = useDispatch();
   const { total, allContintents } = useSelector(state => state.totalCases);
+  const { countryData } = useSelector(state => state.countryData);
 
   useEffect(() => {
     dispatch(fetchAllContinentsData());
   }, [dispatch]);
+  const [selected, setSelected] = useState('');
+  const [error, setError] = useState('');
+  const [display, setDisplay] = useState('');
+
+  const submitHandler = () => {
+    if (selected.name) {
+      dispatch(oneCountryAction(selected.name));
+    } else {
+      setError('Please select a country');
+    }
+  };
+  setTimeout(() => {
+    setDisplay('hidden');
+  }, 5000);
 
   return (
     <div>
-      <Header totalCases={formatNumber(total.cases)} />
-      <DetailsCard total={total} />
+      <Header
+        totalCases={
+          countryData
+            ? formatNumber(countryData.cases)
+            : formatNumber(total.cases)
+        }
+        setSelected={setSelected}
+        selected={selected}
+        submitHandler={submitHandler}
+        error={error}
+        selected={selected}
+        display={display}
+      />
+      <DetailsCard total={countryData ? countryData : total} />
       <div className='text-center'>
         <h1 className='larger-black'>PER CONTINENTS</h1>
 

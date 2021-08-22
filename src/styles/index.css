@@ -180,6 +180,16 @@ input {
   width: 100%;
   text-align: center;
 }
+.error {
+  background-color: rgb(241, 100, 100);
+  color: white;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  border-radius: 3px;
+  /* padding: 0.7rem 1rem; */
+  margin-bottom: 2rem;
+}
 .about {
   background: rgb(189, 189, 189);
 }
@@ -200,6 +210,9 @@ a {
 }
 .slideView {
   position: relative;
+}
+.hidden {
+  display: none;
 }
 .back,
 .next {
