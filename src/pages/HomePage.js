@@ -23,7 +23,6 @@ const HomePage = () => {
   const { total, allContintents } = useSelector(state => state.totalCases);
 
   useEffect(() => {
-    console.log('RRRRREEREER');
     dispatch(fetchAllContinentsData());
   }, [dispatch]);
 
